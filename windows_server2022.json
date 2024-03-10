@@ -1,42 +1,38 @@
 {
-    "builders": [
-      {
-        "CPUs": 1,
-        "Datastore": "lunssddata01",
-        "RAM": 2048,
-        "boot_command": [
-          "<spacebar>",
-          "<esc><wait>",
-          "exit<wait>",
-          "install<wait>",
-          "<enter><wait>"
-        ],
-        "cluster": "igeparesx01p.indioge.lc",
-        "datacenter": "Datacenter",
-        "disk_controller_type": "pvscsi",
-        "guest_os_type": "windows9Server64Guest",
-        "insecure_connection": true,
-        "iso_target_path": "stohhdshare/ISO/en-us_windows_server_2022_updated_july_2023_x64_dvd_541692c3.iso",
-        "network_adapters": [
-          {
-            "network": "DPG_UAT"
-          }
-        ],
-        "password": "Azerty@77",
-        "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-        "ssh_password": "Password123",
-        "ssh_timeout": "10m",
-        "ssh_username": "root",
-        "storage": [
-          {
-            "disk_size": 20000,
-            "disk_thin_provisioned": true
-          }
-        ],
-        "type": "vsphere-iso",
-        "username": "administrator@vsphere.local",
-        "vcenter_server": "10.75.64.138",
-        "vm_name": "tpl-w"
-      }
-    ]
-  }
+  "builders": [
+    {
+      "CPUs": 1,
+      "Datastore": "lunhdddata01",
+      "RAM": 2048,
+      "boot_order": "cd-rom, disk",
+      "cluster": "igeparesx01p.indioge.lc",
+      "datacenter": "Datacenter",
+      "disk_controller_type": "pvscsi",
+      "folder": "00-templates",
+      "guest_os_type": "windows9Server64Guest",
+      "insecure_connection": true,
+      "iso_paths": [
+        "[stohhdshare] ISO/en-us_windows_server_2022_updated_july_2023_x64_dvd_541692c3.iso"        ],
+      "network_adapters": [
+        {
+          "network": "DPG_UAT"
+        }
+      ],
+      "password": "Azerty@77",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "ssh_password": "Password123",
+      "ssh_timeout": "10m",
+      "ssh_username": "root",
+      "storage": [
+        {
+          "disk_size": 50000,
+          "disk_thin_provisioned": true
+        }
+      ],
+      "type": "vsphere-iso",
+      "username": "administrator@vsphere.local",
+      "vcenter_server": "10.75.64.138",
+      "vm_name": "tpl-w"
+   }
+ ]
+}
