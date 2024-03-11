@@ -10,7 +10,9 @@
       "datastore": "{{user `vsphere_datastore`}}",
       "disk_controller_type": "pvscsi",
       "floppy_files": [
-        "setup/win22/autounattend.xml"
+        "setup/win22/autounattend.xml",
+        "setup/setup.ps1",
+        "setup/vmtools.cmd"
       ],
       "folder": "{{user `vsphere_folder`}}",
       "guest_os_type": "windows2019srvNext_64Guest",
@@ -37,6 +39,14 @@
       "vm_name": "{{user `vsphere_template_name`}}",
       "winrm_password": "{{user `winadmin_password`}}",
       "winrm_username": "Administrator"
+    }
+  ],
+  "provisioners": [
+    {
+      "inline": [
+        "dir c:\\"
+      ],
+      "type": "windows-shell"
     }
   ],
   "sensitive-variables": [
