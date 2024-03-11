@@ -1,0 +1,16 @@
+{
+    "vsphere_server": "10.75.64.138",
+    "vsphere_user": "administrator@vsphere.local",
+    "vsphere_password": "Azerty@77",
+    "vsphere_template_name": "Tpl-Win22",
+    "vsphere_folder": "00-templates",
+    "vsphere_dc_name": "Datacenter",
+    "vsphere_compute_cluster": "igeparesx01p.indioge.lc",
+    "vsphere_portgroup_name": "DPG_UAT",
+    "vsphere_datastore": "lunhdddata01",
+    "winadmin_password": "Secretpassword",
+    "cpu_num": "4",
+    "mem_size": "4096",
+    "disk_size": "102400",
+    "os_iso_path": "[stohhdshare] ISO/en-us_windows_server_2022_updated_july_2023_x64_dvd_541692c3.iso"
+}
