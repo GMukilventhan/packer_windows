@@ -12,4 +12,5 @@ accept
 custom 
 choix driver 
 
-
+packer build testtl.json
+packer build -var-file variables.json win22.json 
