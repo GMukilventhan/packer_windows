@@ -10,7 +10,8 @@
     "vsphere_datastore": "vsanDatastore",
     "winadmin_password": "Secretpassword",
     "cpu_num": "4",
-    "mem_size": "4096",
+    "mem_size": "8192",
     "disk_size": "102400",
-    "os_iso_path": "[vsanDatastore] contentlib-contentlib-624cc564-621f-46d1-8f15-7f40a0cdc961/29cbe9eb-3e38-4963-8848-d855a1abea0e/Windows_Server_2022.iso"
+    "os_iso_path": "[vsanDatastore] contentlib-624cc564-621f-46d1-8f15-7f40a0cdc961/d7e50001-ce96-456b-bc39-d504681712ff/Windows Server 2022 July 2023 (2)_1b989e4a-233d-4f13-9018-fbf5db8f4be2.iso"
+
 }
