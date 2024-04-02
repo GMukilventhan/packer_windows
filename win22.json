@@ -23,7 +23,9 @@
       ],
       "network_adapters": [
         {
-          "network": "{{user `vsphere_portgroup_name`}}"
+          "network": "{{user `vsphere_portgroup_name`}}",
+          "network_card": "vmxnet3"
+
         }
       ],
       "password": "{{user `vsphere_password`}}",
