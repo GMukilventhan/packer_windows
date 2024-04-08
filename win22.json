@@ -11,8 +11,8 @@
       "disk_controller_type": "pvscsi",
       "floppy_files": [
         "setup/win22/autounattend.xml",
-        "setup/vmtools.cmd", 
-        "setup/setup.ps1"
+        "setup/setup.ps1",
+        "setup/vmtools.ps1"
       ],
       "folder": "{{user `vsphere_folder`}}",
       "guest_os_type": "windows2019srvNext_64Guest",
@@ -56,3 +56,4 @@
     "winadmin_password"
   ]
 }
+
