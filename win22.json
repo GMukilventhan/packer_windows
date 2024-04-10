@@ -4,15 +4,15 @@
       "CPUs": "{{user `cpu_num`}}",
       "RAM": "{{user `mem_size`}}",
       "cluster": "{{user `vsphere_compute_cluster`}}",
-      "communicator": "winrm",
+      "communicator": "none",
+      "shutdown_timeout": "5h",
       "convert_to_template": "true",
       "datacenter": "{{user `vsphere_dc_name`}}",
       "datastore": "{{user `vsphere_datastore`}}",
       "disk_controller_type": "pvscsi",
       "floppy_files": [
         "setup/win22/autounattend.xml",
-        "setup/setup.ps1",
-        "setup/vmtools.ps1"
+        "setup/setup.ps1"
       ],
       "folder": "{{user `vsphere_folder`}}",
       "guest_os_type": "windows2019srvNext_64Guest",
@@ -25,7 +25,6 @@
         {
           "network": "{{user `vsphere_portgroup_name`}}",
           "network_card": "vmxnet3"
-
         }
       ],
       "password": "{{user `vsphere_password`}}",
@@ -38,22 +37,7 @@
       "type": "vsphere-iso",
       "username": "{{user `vsphere_user`}}",
       "vcenter_server": "{{user `vsphere_server`}}",
-      "vm_name": "{{user `vsphere_template_name`}}",
-      "winrm_password": "{{user `winadmin_password`}}",
-      "winrm_username": "Administrator"
+      "vm_name": "{{user `vsphere_template_name`}}"
     }
-  ],
-  "provisioners": [
-    {
-      "inline": [
-        "dir c:\\"
-      ],
-      "type": "windows-shell"
-    }
-  ],
-  "sensitive-variables": [
-    "vsphere_password",
-    "winadmin_password"
   ]
-}
-
+  }

@@ -2,7 +2,7 @@
     "vsphere_server": "10.75.64.10",
     "vsphere_user": "L2-0753014@infra.indio",
     "vsphere_password": "Azerty@77",
-    "vsphere_template_name": "Tpl-Win22_v1",
+    "vsphere_template_name": "Tpl-Win22_V1",
     "vsphere_folder": "00-templates",
     "vsphere_dc_name": "igfrdct01p",
     "vsphere_compute_cluster": "igfresx01p.infra.indio",
