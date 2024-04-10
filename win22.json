@@ -5,7 +5,7 @@
       "RAM": "{{user `mem_size`}}",
       "cluster": "{{user `vsphere_compute_cluster`}}",
       "communicator": "none",
-      "shutdown_timeout": "5h",
+      "shutdown_timeout": "1h",
       "convert_to_template": "true",
       "datacenter": "{{user `vsphere_dc_name`}}",
       "datastore": "{{user `vsphere_datastore`}}",
