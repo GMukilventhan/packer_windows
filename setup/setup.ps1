@@ -9,33 +9,33 @@ Set-DnsClientServerAddress -InterfaceIndex $NetworkInterface.InterfaceIndex -Ser
 Get-NetIPAddress
 Get-DnsClientServerAddress
 
-$ProgressPreference = "SilentlyContinue"
-$webclient = New-Object System.Net.WebClient
-$version_url = "https://packages.vmware.com/tools/releases/latest/windows/x64/"
-$raw_package = $webclient.DownloadString($version_url)
-$raw_package -match "VMware-tools[\w-\d\.]*\.exe"
-$package = $Matches.0
-$url = "https://packages.vmware.com/tools/releases/latest/windows/x64/$package"
-$exe = "$Env:TEMP\$package"
-Write-Output "***** Downloading VMware Tools"
-$webclient.DownloadFile($url, $exe)
-$parameters = '/S /v "/qn REBOOT=R ADDLOCAL=ALL"'
-Write-Output "***** Installing VMware Tools"
-Start-Process $exe $parameters -Wait
-Write-Output "***** Deleting $exe"
-Remove-Item $exe
+#$ProgressPreference = "SilentlyContinue"
+#$webclient = New-Object System.Net.WebClient
+#$version_url = "https://packages.vmware.com/tools/releases/latest/windows/x64/"
+#$raw_package = $webclient.DownloadString($version_url)
+#$raw_package -match "VMware-tools[\w-\d\.]*\.exe"
+#$package = $Matches.0
+#$url = "https://packages.vmware.com/tools/releases/latest/windows/x64/$package"
+#$exe = "$Env:TEMP\$package"
+#Write-Output "***** Downloading VMware Tools"
+#$webclient.DownloadFile($url, $exe)
+#$parameters = '/S /v "/qn REBOOT=R ADDLOCAL=ALL"'
+#Write-Output "***** Installing VMware Tools"
+#Start-Process $exe $parameters -Wait
+#Write-Output "***** Deleting $exe"
+#Remove-Item $exe
 
 
 
 #Install PS Windows Update Module
 
-Get-PackageProvider -name nuget -force
-Get-WindowsUpdate -MicrosoftUpdate -install -IgnoreUserInput -acceptall -AutoReboot | Out-File -filepath 'c:\windowsupdate.log' -append
+#Get-PackageProvider -name nuget -force
+#Get-WindowsUpdate -MicrosoftUpdate -install -IgnoreUserInput -acceptall -AutoReboot
+#Install-WindowsUpdate -IgnoreUserInput -AcceptAll -AutoReboot
 
+#WinRM Configure
+#winrm quickconfig -quiet
+#winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+#winrm set winrm/config/service/auth '@{Basic="true"}'
 
-WinRM Configure
-winrm quickconfig -quiet
-winrm set winrm/config/service '@{AllowUnencrypted="true"}'
-winrm set winrm/config/service/auth '@{Basic="true"}'
-
-Stop-Computer -Force
+#Stop-Computer -Force
