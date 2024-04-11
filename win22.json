@@ -12,7 +12,9 @@
       "disk_controller_type": "pvscsi",
       "floppy_files": [
         "setup/win22/autounattend.xml",
-        "setup/setup.ps1"
+        "setup/setup.ps1",
+        "setup/cert/rootcaindio.cer",
+        "setup/cert/subcaindio.cer"
       ],
       "folder": "{{user `vsphere_folder`}}",
       "guest_os_type": "windows2019srvNext_64Guest",

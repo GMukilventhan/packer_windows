@@ -1,3 +1,5 @@
+
+
 $IPAddress = "10.75.1.100"
 $SubnetMask = "255.255.248.0"
 $DefaultGateway = "10.75.0.1"
@@ -6,8 +8,7 @@ $DNS2 = "8.8.4.4"
 $NetworkInterface = Get-NetAdapter -Physical
 New-NetIPAddress -InterfaceIndex $NetworkInterface.InterfaceIndex -IPAddress $IPAddress -PrefixLength 21 -DefaultGateway $DefaultGateway
 Set-DnsClientServerAddress -InterfaceIndex $NetworkInterface.InterfaceIndex -ServerAddresses $DNS1, $DNS2
-Get-NetIPAddress
-Get-DnsClientServerAddress
+
 
 $ProgressPreference = "SilentlyContinue"
 $webclient = New-Object System.Net.WebClient
@@ -30,5 +31,7 @@ Remove-Item $exe
 netsh advfirewall firewall add rule name="Open Port 3389" dir=in action=allow protocol=TCP localport=3389
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 
+certutil -addstore Root "a:\rootcaindio.cer"
+certutil -addstore CA "a:\subcaindio.cer"
 
 Stop-Computer -Force
