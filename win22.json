@@ -11,22 +11,21 @@
       "datastore": "{{user `vsphere_datastore`}}",
       "disk_controller_type": "pvscsi",
       "floppy_files": [
-        "setup/win22/autounattend.xml",
-        "setup/setup.ps1",
-        "setup/cert/rootcaindio.cer",
-        "setup/cert/subcaindio.cer"
+        "{{user `floppy_file_1`}}",
+        "{{user `floppy_file_2`}}",
+        "{{user `floppy_file_3`}}",
+        "{{user `floppy_file_4`}}"
       ],
       "folder": "{{user `vsphere_folder`}}",
-      "guest_os_type": "windows2019srvNext_64Guest",
-      "host": "{{user `vsphere_host`}}",
-      "insecure_connection": "true",
+      "guest_os_type": "{{user `guest_os_type`}}",
+      "insecure_connection": "{{user `insecure_connection`}}",
       "iso_paths": [
         "{{user `os_iso_path`}}"
       ],
       "network_adapters": [
         {
           "network": "{{user `vsphere_portgroup_name`}}",
-          "network_card": "vmxnet3"
+          "network_card": "{{user `network_card_type`}}"
         }
       ],
       "password": "{{user `vsphere_password`}}",
@@ -42,4 +41,4 @@
       "vm_name": "{{user `vsphere_template_name`}}"
     }
   ]
-  }
+}
