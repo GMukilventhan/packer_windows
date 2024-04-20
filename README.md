@@ -12,12 +12,13 @@
 
 ##  Objectif
 
-<code>► Ce projet a pour objectif d'automatiser la création d'images de machines virtuelles Windows Server 2022 à l'aide de Packer. Les images peuvent être configurées soit avec une interface graphique, soit en Core. </code>
+Ce projet a pour objectif d'automatiser la création d'images de machines virtuelles Windows Server 2022 à l'aide de Packer. Les images peuvent être configurées soit avec une interface graphique, soit en Core. 
 
 ---
 
 ##  Prérequis
-
+**Note**
+[!WARNING]
 Avant de commencer, il faut avoir les élements suivants :
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
 - Avoir l'ISO sur le vcenter. 
