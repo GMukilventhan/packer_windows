@@ -36,7 +36,10 @@
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
 - Avoir l'ISO sur le vcenter. 
 - Clé d'activation de windows server.
-- Ne pas oublier les fichiers de configuration et les scripts dont vous avez besoin pour la création du template. 
+- Ne pas oublier : 
+ - les fichiers de configuration
+ - le fichier de réponse qui permet d'installer  automatiquement 
+ - les scripts dont vous avez besoin pour la création du template
 
 </code>
 
@@ -67,7 +70,7 @@
 
 | Fichiers                                                                                         |  Descriptions                          |
 | ---                                                                                          | ---                             |
-| win22.json        | <code>► Fichier de configuration Packer pour la création de l'image Windows Server.</code> |
+| win22.json        | <code>► Fichier de configuration Packer pour la création de l'image Windows Server.  </code> |
 | variables.json | <code>► Fichier de configuration contenant les variables.</code> |
 
 </details>
@@ -110,12 +113,21 @@
 
 ##  Utilisation
 
-###  1- Installation de packer
-https://developer.hashicorp.com/packer/install?product_intent=packer
+###  1- Clonage du repo
+
+Commencez par cloner le repo contenant les fichiers de configuration nécessaires avec la commande :
+```console
+git clone 
+```
 
 ###  2- Configuration des variables
 
-Avant de commencer le déploiement de la machin,  il faut modifier le fichier variables. Voici les variables que vous devrez configurer :
+Dans le dossier que vous avez cloner, vous trouverez plusieurs fichiers : 
+
+
+'variables.json'
+Ouvrez ce fichier et modifiez les valeurs des variables selon vos besoins spécifiques. Dans ce fichier de variables, il comporte plusieurs éléments comme les conexions sur le vcenter, le réseau, les specs de la machine etc. 
+Voici les variables que vous devrez configurer :
 ```console
 {
     "vsphere_server": "L'adresse IP ou le nom DNS de votre serveur vSphere.",
@@ -167,38 +179,13 @@ voici un exemple :
 
 ```
 
-<h4></h4>
+###  3- Création template
 
-> 1. Clone the packer_windows repository:
->
-> ```console
-> $ git clone https://github.com/GMukilventhan/packer_windows
-> ```
->
-> 2. Change to the project directory:
-> ```console
-> $ cd packer_windows
-> ```
->
-> 3. Install the dependencies:
-> ```console
-> $ > INSERT-INSTALL-COMMANDS
-> ```
 
-###  Usage
+Une fois que les variables sont configurées, vous pouvez créer la machine qui sera convertie en template une fois que l'éxecution fini. Il faut exécuter la commande suivante dans le répertoire du projet :
+```console
+packer build -var-file=variables.json win22.json
+```
 
-<h4>From <code>source</code></h4>
 
-> Run packer_windows using the command below:
-> ```console
-> $ > INSERT-RUN-COMMANDS
-> ```
-
-###  Tests
-
-> Run the test suite using the command below:
-> ```console
-> $ > INSERT-TEST-COMMANDS
-> ```
-
----
+Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines dans l'infrastructure. 
