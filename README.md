@@ -222,6 +222,3 @@ Build 'vsphere-iso' finished after 20 minutes 20 seconds.
 --> vsphere-iso: Tpl-Win22
 ```
 Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines virtuelles dans l'infrastructure. 
-=======
-Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines virtuelles dans l'infrastructure. 
->>>>>>> 0798747d0780f24b1b68ce11aa8471ad6441f77a
