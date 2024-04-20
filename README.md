@@ -8,20 +8,6 @@
     <em><code>► ESGI 5SRC2 PA Projet</code></em>
 
 
-<br><!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Sommaire</summary><br>
-
-- [ Objectif](#-Objectif)
-- [ Prérequis](#-Prérequis)
-- [ Structure du Projet ](#-Structure_du_Projet)
-- [ Contenu du dossier ](#-Contenu_du_dossier)
-- [ Getting Started](#-getting-started)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Tests](#-tests)
-
-</details>
 <hr>
 
 ##  Objectif
