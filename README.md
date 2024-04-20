@@ -18,8 +18,8 @@ Ce projet a pour objectif d'automatiser la création d'images de machines virtue
 
 ## Prérequis
 
-**Note**
-
+> [!CAUTION]
+> Negative potential consequences of an action
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
