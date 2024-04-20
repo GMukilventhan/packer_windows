@@ -16,17 +16,24 @@ Ce projet a pour objectif d'automatiser la création d'images de machines virtue
 
 ---
 
-##  Prérequis
+## Prérequis
+
 **Note**
-[!WARNING]
-Avant de commencer, il faut avoir les élements suivants :
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants :
+
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
-- Avoir l'ISO sur le vcenter. 
-- Clé d'activation de windows server.
-- Ne pas oublier : 
- - les fichiers de configuration
- - le fichier de réponse qui permet d'installer  automatiquement 
- - les scripts dont vous avez besoin pour la création du template
+
+- Avoir l'ISO sur le vCenter.
+
+- Clé d'activation de Windows Server.
+
+- Ne pas oublier :
+  - Les fichiers de configuration.
+  - Le fichier de réponse qui permet d'installer automatiquement.
+  - Les scripts dont vous avez besoin pour la création du template.
+
+**Attention**: Assurez-vous de respecter tous les prérequis énumérés ci-dessus avant de commencer le processus de création de l'image Windows Server à l'aide de Packer.
 
 
 
