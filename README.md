@@ -18,8 +18,10 @@ Ce projet a pour objectif d'automatiser la création d'images de machines virtue
 
 ## Prérequis
 
-> [!CAUTION]
-> Negative potential consequences of an action
+> [!Attention ]
+> Assurez-vous de respecter tous les prérequis cité ci-dessus avant de commencer le processus de création de l'image Windows Server à l'aide de Packer.
+
+
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
@@ -33,7 +35,6 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
   - Le fichier de réponse qui permet d'installer automatiquement.
   - Les scripts dont vous avez besoin pour la création du template.
 
-**Attention**: Assurez-vous de respecter tous les prérequis énumérés ci-dessus avant de commencer le processus de création de l'image Windows Server à l'aide de Packer.
 
 
 
