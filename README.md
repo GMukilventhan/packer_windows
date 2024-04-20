@@ -137,6 +137,7 @@ Avant de commencer le déploiement de la machin,  il faut modifier le fichier va
     "insecure_connection": "Indiquer la connexion à vspshere est sécurisé par true ou false",
     "network_card_type": "Indiquer Le type de carte réseau"
 }
+```
 
 voici un exemple : 
 {
