@@ -18,7 +18,7 @@ Ce projet a pour objectif d'automatiser la création d'images de machines virtue
 
 ## Prérequis
 
-> [!Attention ]
+> [!IMPORTANT]
 > Assurez-vous de respecter tous les prérequis cité ci-dessus avant de commencer le processus de création de l'image Windows Server à l'aide de Packer.
 
 
