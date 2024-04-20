@@ -4,8 +4,7 @@
 <p align="center">
     <h1 align="center">PACKER_WINDOWS_SRV_2022_GUI_or_CORE</h1>
 </p>
-<p align="center">
-    <em><code>► ESGI 5SRC2 PA Projet</code></em>
+
 
 
 <hr>
@@ -187,6 +186,7 @@ packer build  -var-file variables.json win22.json
 ~/ESGI/5eme année/pa/packer_windows  on   main ⇣1 ▓> packer build  -var-file variables.json win22.json 
 vsphere-iso: output will be in this color.
 
+<<<<<<< HEAD
 ==> vsphere-iso: Creating virtual machine...
 ==> vsphere-iso: Customizing hardware...
 ==> vsphere-iso: Mounting ISO images...
@@ -222,3 +222,6 @@ Build 'vsphere-iso' finished after 20 minutes 20 seconds.
 --> vsphere-iso: Tpl-Win22
 ```
 Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines virtuelles dans l'infrastructure. 
+=======
+Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines virtuelles dans l'infrastructure. 
+>>>>>>> 0798747d0780f24b1b68ce11aa8471ad6441f77a
