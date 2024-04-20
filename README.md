@@ -4,8 +4,7 @@
 <p align="center">
     <h1 align="center">PACKER_WINDOWS_SRV_2022_GUI_or_CORE</h1>
 </p>
-<p align="center">
-    <em><code>► ESGI 5SRC2 PA Projet</code></em>
+
 
 
 <hr>
