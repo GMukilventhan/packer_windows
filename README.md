@@ -140,6 +140,7 @@ Avant de commencer le déploiement de la machin,  il faut modifier le fichier va
 ```
 
 voici un exemple : 
+```console
 {
     "vsphere_server": "10.75.64.10",
     "vsphere_user": "toto@infra.indio",
@@ -164,3 +165,40 @@ voici un exemple :
     "network_card_type": "vmxnet3"
 }
 
+```
+
+<h4></h4>
+
+> 1. Clone the packer_windows repository:
+>
+> ```console
+> $ git clone https://github.com/GMukilventhan/packer_windows
+> ```
+>
+> 2. Change to the project directory:
+> ```console
+> $ cd packer_windows
+> ```
+>
+> 3. Install the dependencies:
+> ```console
+> $ > INSERT-INSTALL-COMMANDS
+> ```
+
+###  Usage
+
+<h4>From <code>source</code></h4>
+
+> Run packer_windows using the command below:
+> ```console
+> $ > INSERT-RUN-COMMANDS
+> ```
+
+###  Tests
+
+> Run the test suite using the command below:
+> ```console
+> $ > INSERT-TEST-COMMANDS
+> ```
+
+---
