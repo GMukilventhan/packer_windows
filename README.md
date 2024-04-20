@@ -18,7 +18,7 @@
 
 ##  Prérequis
 
-<code> ► Avant de commencer, il faut avoir les élements suivants :
+Avant de commencer, il faut avoir les élements suivants :
 - Packer installé sur votre système. Vous pouvez le télécharger depuis le site officiel de Packer : [Packer.io](https://www.packer.io/downloads).
 - Avoir l'ISO sur le vcenter. 
 - Clé d'activation de windows server.
@@ -27,7 +27,7 @@
  - le fichier de réponse qui permet d'installer  automatiquement 
  - les scripts dont vous avez besoin pour la création du template
 
-</code>
+
 
 ---
 
@@ -168,10 +168,11 @@ voici un exemple :
 ###  3- Création template
 
 
-Une fois que les variables sont configurées, vous pouvez créer la machine qui sera convertie en template une fois que l'éxecution fini. Il faut exécuter la commande suivante dans le répertoire du projet :
+Une fois que les variables sont configurées, vous pouvez créer la machine qui sera convertie en template une fois que l'éxecution fini. 
+Il faut exécuter la commande suivante dans le répertoire du projet :
 ```console
-packer build -var-file=variables.json win22.json
+packer build  -var-file variables.json win22.json 
 ```
 
 
-Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines dans l'infrastructure. 
+Une fois que Packer a terminé la création du template  vous pouvez utiliser le template pour déployer des machines virtuelles dans l'infrastructure. 
